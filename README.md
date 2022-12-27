@@ -40,6 +40,17 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
+# +++ redux , manager page, nodejs, express
+
+
+
+## Study webGL
+# https://blog.maximeheckel.com/posts/the-study-of-shaders-with-react-three-fiber/ 
+# https://codesandbox.io/s/03-adding-the-texture-refnp?from-embed=&file=/src/gl/glsl/vertex.glsl
+# https://tympanus.net/codrops/2020/03/17/create-a-wave-motion-effect-on-an-image-with-three-js/
+# https://docs.pmnd.rs/react-three-fiber/tutorials/loading-textures
+# https://velog.io/@kimbyungchan/react-threejs-shader-tutorial
+# https://heinleinsgame.tistory.com/8
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
