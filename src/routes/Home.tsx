@@ -1,30 +1,33 @@
 import './Home.css';
 import {useRef,useMemo} from 'react';
-import {Canvas,useFrame,useLoader} from '@react-three/fiber';
+import {Canvas,useFrame,useLoader,useThree} from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import vertexShader from '../glsl/vertex';
 import fragmentShader from '../glsl/fragment';
 import * as THREE from 'three';
 import { ShaderMaterial, TextureLoader } from 'three';
-import image from '../../public/back1.png'
+import image from '../img/test3.jpg'
+import Hometext from "../components/Hometext";
 
 
 
 
 
 export default function Home() {
-
+  
   const Back=()=>{
     const mesh =useRef<ShaderMaterial | null>(null);
+    const {size} =useThree();
     const background = useLoader(TextureLoader,image)
     const uniforms=useMemo(
       ()=>({
+      uTime:{
+        value:0.0
+      }, 
       uTexture:{
         value:background
       },
-      uTime:{
-        value:0.0
-      },
+      
 
     }),[]);
 
@@ -33,23 +36,24 @@ export default function Home() {
       if(!mesh.current){
         return;
       }
-      mesh.current.uniforms.uTime.value = state.clock.getElapsedTime();
+      mesh.current.uniforms.uTime.value = clock.getElapsedTime();
     });
 
     return(
 
-      <mesh
+      <mesh scale={[1,1,1]}
       
-      position={[0,0,0]}
+  
       >
-        <planeGeometry args={[1,1,32,32]}/>
+        <planeGeometry args={[size.width,size.height,10,5]}/>
         <shaderMaterial 
         ref={mesh}
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}
         uniforms={uniforms}
-        wireframe={true}
-        side={THREE.DoubleSide}
+      
+        // wireframe={true}
+        // side={THREE.DoubleSide}
         
         />
       </mesh>
@@ -65,12 +69,22 @@ export default function Home() {
   return (
     <>
       <div className="home">
-        <Canvas camera={{fov:10}}>
-          <OrbitControls />
+        <div className="home_text">
+          <Hometext />
+        </div>
+        <div className="home_canvas">
+           <Canvas 
+            orthographic={true}
           
-          <Back />
-          
-        </Canvas>
+            dpr={window.devicePixelRatio}
+            >
+            
+              <Back />
+            </Canvas>
+
+        </div>
+        
+
       </div>
     </>
   );
