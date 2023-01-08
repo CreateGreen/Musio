@@ -1,44 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 ## Learn More
 # +++ redux , manager page, nodejs, express
 
@@ -52,6 +11,38 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 # https://velog.io/@kimbyungchan/react-threejs-shader-tutorial
 # https://heinleinsgame.tistory.com/8
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ++study
+# svg animation
+https://ordinary-code.tistory.com/25 
+https://blog.avada.io/css/text-animations
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# hometext ex 
+https://codepen.io/tutsplus/embed/vdexgK?height=316&theme-id=0&default-tab=result 
+
+
+## R3F doc
+https://docs.pmnd.rs/react-three-fiber/api/canvas
+https://docs.pmnd.rs/react-three-fiber/getting-started/examples
+https://docs.pmnd.rs/react-three-fiber/advanced/scaling-performance
+https://geekyants.com/blog/introduction-to-react-three-fiber/
+
+# three +ts shader bg
+https://dev.to/noprod/create-a-background-with-glsl-shader-threejs-typescript-i31
+
+# three+react road uniform texture
+https://velog.io/@kimbyungchan/react-threejs-shader-tutorial
+
+# three.js background ex
+https://codepen.io/ykob/pen/BQmLeK
+https://www.awwwards.com/awwwards/collections/three-js/
+https://blog.maximeheckel.com/posts/vaporwave-3d-scene-with-threejs/
+https://adamkarlsten.com/blog/creating-shader-backgrounds/
+https://tympanus.net/codrops/2019/05/22/creating-grid-to-fullscreen-animations-with-three-js/
+https://varun.ca/modular-webgl/
+https://blog.maximeheckel.com/posts/the-study-of-shaders-with-react-three-fiber/
+
+# shader to background error solve
+https://github.com/pmndrs/react-three-fiber/issues/79
+https://meetup.nhncloud.com/posts/297
+https://tsh.io/blog/react-three-fiber/
+https://adamkarlsten.com/blog/creating-shader-backgrounds/
