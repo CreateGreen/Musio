@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+.hometext{
+    padding:0;
+    margin:0;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hometext_svg  {
+    
+    width: 600px;
+    height: 300px;
+    
+}
+.hometext_svg > text {
+    text-anchor:middle;
+    
+   
+    font-family: 'Staatliches', cursive;
+    font-size: 20em;
+    fill:transparent;
+    
+    
+    stroke-dasharray: 1200px;
+    animation: stroke 2.5s linear;
+    animation-fill-mode: forwards;
+}
+.hometext_svg >text:nth-child(1) {
+    animation-delay: 0s;
+
+}
+.hometext_svg >text:nth-child(2) {
+    animation-delay: 0.5s;
+
+}
+.hometext_svg >text:nth-child(3) {
+    animation-delay: 1s;
+
+}
+.hometext_svg >text:nth-child(4) {
+    animation-delay: 1.5s;
+
+}
+.hometext_svg >text:nth-child(5) {
+    animation-delay: 2s;
+
+}
+
+
+@keyframes stroke{
+    0%{
+        stroke:whitesmoke;
+        stroke-width: 7px;
+        stroke-dashoffset: 1200px;
+    }
+    70%{
+        fill:transparent
+    }
+    /* 98%{
+        stroke:whitesmoke;
+        stroke-width: 7px;
+
+    } */
+    100%{
+        stroke:whitesmoke;
+        stroke-width: 7px;
+        stroke-dashoffset: 0px;
+    }
+}
