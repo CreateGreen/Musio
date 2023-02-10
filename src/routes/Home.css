@@ -14,13 +14,30 @@
 
 }
 .home_canvas{
-  z-index: -1;
+  
   margin:0;
   padding:0;
   width: 100vw;
   height:100vh;
-
+  background-color:black;
+  animation: blackout 3s linear;
 }
+
+@keyframes blackout {
+  0%{
+    background-color: white
+  }
+  50%{
+    background-color: rgba(0, 0, 0, 0.503);
+  }
+  100%{
+    background-color:black;
+  }
+}
+
+
+
+
 /* .home{
     width:100%;
     height:100vh;

@@ -1,6 +1,6 @@
 const vertexShader = `
 
-precision highp float;
+precision mediump float;
 
 varying vec2 vUv;
 varying float vWave;
