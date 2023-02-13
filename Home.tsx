@@ -2,14 +2,14 @@ import './Home.css';
 import {useRef,useMemo,useState} from 'react';
 import {Canvas,useFrame,useLoader,useThree} from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import vertexShader from '../glsl/vertex';
-import fragmentShader from '../glsl/fragment';
+import vertexShader from './vertex';
+import fragmentShader from './fragment';
 import * as THREE from 'three';
 import { RGBADepthPacking, ShaderMaterial, TextureLoader } from 'three';
-import image from '../img/test3.jpg'
-import afterimg from '../img/test4.jpg'
-import noise from '../img/noise4.jpg'
-import Hometext from "../components/Hometext";
+import image from './test3.jpg'
+import afterimg from './test4.jpg'
+import noise from './noise4.jpg'
+import Hometext from "./Hometext";
 import {gsap} from 'gsap';
 
 
