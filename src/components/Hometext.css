@@ -2,15 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 .hometext{
+    width:100vw;
     padding:0;
-    margin:0;
+    
+    background: transparent;
+    justify-content: center;
+    display:flex;
+    
+}
+.hometext_main{
+    padding:0;
+    position:absolute;
     background: transparent;
     justify-content: center;
     align-items: center;
-    
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
 }
 
 .hometext_svg  {
+    
     
     width: 600px;
     height: 300px;
@@ -19,7 +32,6 @@
 .hometext_svg > text {
     text-anchor:middle;
     
-   
     font-family: 'Staatliches', cursive;
     font-size: 20em;
     fill:transparent;
@@ -49,6 +61,31 @@
     animation-delay: 2s;
 
 }
+
+
+.hometext_menu{
+    
+    padding:0;
+    margin-left:auto;
+    margin-right:15px;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+
+}
+.hometext_sidesvg{
+    width:150px;
+
+}
+.sidetext{
+    font-family: 'Staatliches', cursive;
+    font-size: 4em;
+    fill:transparent;
+    stroke:antiquewhite;
+    stroke-width: 3px;
+    
+}
+
 
 
 @keyframes stroke{
