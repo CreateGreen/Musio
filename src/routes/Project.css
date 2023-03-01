@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 .project{
+    background-color:rgba(213, 233, 213, 0.877);
     margin:0;
     padding:0;
     width:100vw;
@@ -6,5 +10,17 @@
     overscroll-behavior: none;
     cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4='),
     auto;
+    /* background:url( '../../public/concrete_wall.jpg') ;
+    background-repeat: repeat-x;
+    background-attachment:local;
+    background-size: 200vw; */
+   
+}
+h1{
+    font-size:7rem;
+    font-family:'Staatliches', cursive;
+    color:transparent;
+    -webkit-text-stroke: 1px white;
+    
 
 }
