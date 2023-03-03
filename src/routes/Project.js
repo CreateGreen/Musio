@@ -16,8 +16,11 @@ function Images(props) {
   const ref = useRef();
   const group = useRef();
   const data = useScroll();
+  const navigate = useNavigate()
   const todetail = (url)=>{
-    useNavigate(`/${url}`)
+    let paramdata=url.substring(0,url.length-4)
+    
+    navigate(`/project/detail/${paramdata}`)
   }
   useFrame((state, delta) => {
     if (!group.current) return;
@@ -54,7 +57,7 @@ function Images(props) {
   });
   return (
     <group ref={group}>
-      <Image ref={ref} {...props} onClick={(target)=>console.log(target.url)} onPointerOver={()=>sethover(true)} onPointerOut={()=>sethover(false)}/>
+      <Image ref={ref} {...props} onClick={(e)=>todetail(props.url)} onPointerOver={()=>sethover(true)} onPointerOut={()=>sethover(false)}/>
     </group>
   );
 }

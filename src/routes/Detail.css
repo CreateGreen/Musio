@@ -1,0 +1,38 @@
+.detail {
+  margin: 0;
+  padding: 0;
+  
+}
+.detail_img {
+  position:relative;
+
+}
+.detail_img > img {
+  width: 100vw;
+  min-height: 100vh;
+  display: block;
+  /* animation: todark 2s linear;
+  animation-fill-mode: forwards;
+   */
+}
+/* 
+@keyframes todark{
+    0%{
+      filter:grayscale(0)
+    }
+    50%{
+      filter:grayscale(0.3)
+    }
+    100%{
+      filter:grayscale(0.6)
+    }
+} */
+
+.detail_text{
+  position:absolute;
+  
+  
+  left:0;
+  top:0;
+
+}
