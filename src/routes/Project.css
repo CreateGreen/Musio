@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 .project{
-    background-color:rgba(213, 233, 213, 0.877);
+    /* background-color:rgba(213, 233, 213, 0.877); */
+    background-color:#212129;
     margin:0;
     padding:0;
     width:100vw;
@@ -20,7 +21,7 @@ h1{
     font-size:7rem;
     font-family:'Staatliches', cursive;
     color:transparent;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 1px rgba(255, 255, 240, 0.829);
     
 
 }

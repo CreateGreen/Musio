@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -13,19 +14,46 @@ function Amazon() {
   };
   return (
     <div className="amazon">
-      <div className="amazon_left">
-        <h2>Amazon Copy</h2>
+      <motion.div
+        className="amazon_left"
+        initial={{ x: -500 }}
+        animate={{ x: 0 }}
+        exit={{ x: -500 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.7 }}
+        >
+          Amazon Copy
+        </motion.h2>
         <Link to={"https://creategreen.github.io/Amazoncopy/"}>
-          <p>Visit</p>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.7 }}
+          >
+            Visit
+          </motion.p>
         </Link>
-      </div>
-      <div className="amazon_right">
-        <h2
+      </motion.div>
+      <motion.div
+        className="amazon_right"
+        initial={{ x: 500 }}
+        animate={{ x: 0 }}
+        exit={{ x: 500 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.h2
           onPointerOver={() => gradienthover()}
           onPointerOut={() => gradienthover()}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.7 }}
         >
           Stack
-        </h2>
+        </motion.h2>
         <div className="icon_box" style={{ opacity: 0 }}>
           <img src={process.env.PUBLIC_URL + "/react.png"} />
           <img src={process.env.PUBLIC_URL + "/typescript.png"} />
@@ -35,7 +63,7 @@ function Amazon() {
           <img src={process.env.PUBLIC_URL + "/node-js.png"} />
           <img src={process.env.PUBLIC_URL + "/firebase.png"} />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

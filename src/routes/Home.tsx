@@ -10,15 +10,16 @@ import afterimg from "../img/test4.jpg";
 import noise from "../img/noise4.jpg";
 import Hometext from "../components/Hometext";
 import { gsap } from "gsap";
+import { MotionCanvas, motion as motion3d } from "framer-motion-3d";
+import { motion, MotionConfig } from "framer-motion";
 
 export default function Home() {
   const [clickfortext, setclickfortext] = useState(false);
 
   const click = useRef(false);
   const transition = () => {
-    
     click.current = !click.current;
-    setclickfortext(click.current)
+    setclickfortext(click.current);
   };
   const Back = () => {
     const mesh = useRef<ShaderMaterial | null>(null);
@@ -78,17 +79,21 @@ export default function Home() {
   };
 
   return (
-    <>
-      <div className="home">
-        <div className="home_text">
-          <Hometext click={clickfortext} />
-        </div>
-        <div className="home_canvas">
-          <Canvas orthographic={true} dpr={window.devicePixelRatio}>
-            <Back />
-          </Canvas>
-        </div>
+    <motion.div
+      className="home"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 2 }}
+    >
+      <div className="home_text">
+        <Hometext click={clickfortext} />
       </div>
-    </>
+      <div className="home_canvas">
+        <Canvas orthographic={true} dpr={window.devicePixelRatio}>
+          <Back />
+        </Canvas>
+      </div>
+    </motion.div>
   );
 }

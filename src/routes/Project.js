@@ -6,22 +6,23 @@ import {
   Preload,
   Image,
 } from "@react-three/drei";
-import { useRef,useState } from "react";
+import { useRef, useState } from "react";
 import { useFrame, Canvas, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Images(props) {
-  const [hover,sethover]=useState(false)
+  const [hover, sethover] = useState(false);
   const ref = useRef();
   const group = useRef();
   const data = useScroll();
-  const navigate = useNavigate()
-  const todetail = (url)=>{
-    let paramdata=url.substring(0,url.length-4)
-    
-    navigate(`/project/detail/${paramdata}`)
-  }
+  const navigate = useNavigate();
+  const todetail = (url) => {
+    let paramdata = url.substring(0, url.length - 4);
+
+    navigate(`/project/detail/${paramdata}`);
+  };
   useFrame((state, delta) => {
     if (!group.current) return;
     if (!ref.current) return;
@@ -39,10 +40,10 @@ function Images(props) {
       4,
       delta
     );
-    
+
     ref.current.material.zoom = THREE.MathUtils.damp(
       ref.current.material.zoom,
-      hover?3:1,
+      hover ? 3 : 1,
       4,
       delta
     );
@@ -51,25 +52,27 @@ function Images(props) {
     //   click?width:,
     //   4,delta
     // );
-    
-    
-   
   });
   return (
     <group ref={group}>
-      <Image ref={ref} {...props} onClick={(e)=>todetail(props.url)} onPointerOver={()=>sethover(true)} onPointerOut={()=>sethover(false)}/>
+      <Image
+        ref={ref}
+        {...props}
+        onClick={(e) => todetail(props.url)}
+        onPointerOver={() => sethover(true)}
+        onPointerOut={() => sethover(false)}
+      />
     </group>
   );
 }
 
 function Page({ m = 0.4, urls, ...props }) {
-  const { width,height } = useThree((state) => state.viewport);
-  
+  const { width, height } = useThree((state) => state.viewport);
+
   const w = width < 10 ? 1.5 / 3 : 1 / 3;
   return (
     <group {...props}>
       <Images
-        
         position={[-width * w, 0, -1]}
         scale={[width * w - m * 2, 5, 1]}
         url={urls[0]}
@@ -122,7 +125,13 @@ function Pages() {
 
 const Project = () => {
   return (
-    <div className="project">
+    <motion.div
+      className="project"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+    >
       <Canvas gl={{ antialias: false }} dpr={[1, 1.5]}>
         <ScrollControls
           infinite
@@ -137,18 +146,17 @@ const Project = () => {
           // }}
         >
           <Scroll>
-            
             <Pages />
           </Scroll>
           <Scroll html>
             <div>
-              <h1 style={{ position: "absolute", top: "10vh", left: "-75vw" }}>
+              <h1 style={{ position: "absolute", top: "7vh", left: "10vw" }}>
                 Project
               </h1>
-              <h1 style={{ position: "absolute", top: "60vh", left: "25vw" }}>
+              <h1 style={{ position: "absolute", top: "60vh", left: "40vw" }}>
                 Gallery
               </h1>
-              <h1 style={{ position: "absolute", top: "20vh", left: "125vw" }}>
+              <h1 style={{ position: "absolute", top: "35vh", left: "38vw" }}>
                 *
               </h1>
               <h1 style={{ position: "absolute", top: "10vh", left: "225vw" }}>
@@ -165,7 +173,7 @@ const Project = () => {
         </ScrollControls>
         <Preload />
       </Canvas>
-    </div>
+    </motion.div>
   );
 };
 
