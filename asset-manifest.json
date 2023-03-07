@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Musio/static/css/main.1ed7e4f6.css",
-    "main.js": "/Musio/static/js/main.6de0e41c.js",
+    "main.css": "/Musio/static/css/main.87c0a74d.css",
+    "main.js": "/Musio/static/js/main.d5301140.js",
     "static/media/noise4.jpg": "/Musio/static/media/noise4.45da5f1c0d7747ed9a84.jpg",
     "static/media/test3.jpg": "/Musio/static/media/test3.d079b7aa21f56795b9b2.jpg",
     "static/media/test4.jpg": "/Musio/static/media/test4.bc215cc96d3aea6a6aaa.jpg",
     "index.html": "/Musio/index.html",
-    "main.1ed7e4f6.css.map": "/Musio/static/css/main.1ed7e4f6.css.map",
-    "main.6de0e41c.js.map": "/Musio/static/js/main.6de0e41c.js.map"
+    "main.87c0a74d.css.map": "/Musio/static/css/main.87c0a74d.css.map",
+    "main.d5301140.js.map": "/Musio/static/js/main.d5301140.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ed7e4f6.css",
-    "static/js/main.6de0e41c.js"
+    "static/css/main.87c0a74d.css",
+    "static/js/main.d5301140.js"
   ]
 }
