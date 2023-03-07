@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+
+.amazon{
+    margin:0;
+    padding:0;
+    width:100vw;
+    height:100vh;
+    display: flex;
+}
+.amazon_left{
+    background-color:rgba(0, 0, 0, 0.678);
+    width:18%;
+    height:100vh;
+    color:ivory;
+    font-family:"Staatliches";
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.amazon_left > h2{
+    
+    align-self: center;
+}
+.amazon_left > a{
+    
+    
+    color:ivory;
+    text-decoration:none;
+
+}
+.amazon_left > a:hover{
+    text-shadow: 1px , 0px , 0px rgba(255, 255, 240, 0.692);
+    color:cadetblue;
+    transition: 0.3s;
+}
+.amazon_right{
+    background-color:rgba(0, 0, 0, 0.678);
+    margin-left:auto;
+    width:18%;
+    color:ivory;
+    font-family:"Staatliches";
+    text-align:center;
+}
+.amazon_right >h2:hover{
+    text-shadow: 1px , 0px , 0px rgba(255, 255, 240, 0.692);
+    color:rgb(105, 161, 163);
+    transition: 0.3s;
+    cursor:zoom-in;
+
+}
+.amazon_right > div > img{
+
+    width:60px;
+    margin:5px;
+    padding:5px
+
+}
+

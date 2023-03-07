@@ -1,27 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter , Route,Routes } from "react-router-dom";
 
-
-import Home from "./routes/Home";
-
-
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+import Animatedroute from "./Animatedroute";
 
 function App() {
- 
-  return (
-    
-    <div className="App">
-      
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-      
-        <Routes>
-        <Route path="/" element={<Home />}/>
+  
 
-        </Routes>
+  return (
+    <div className="App">
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Animatedroute />
       </BrowserRouter>
     </div>
   );
 }
-
 
 export default App;

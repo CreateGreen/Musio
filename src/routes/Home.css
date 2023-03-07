@@ -1,10 +1,14 @@
 .home{
-  
+  position:absolute;
   margin:0;
   padding:0;
   width: 100vw;
   height:100vh;
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4='),
+  auto;
+  
 }
+
 .home_text{
   position:absolute;
   top:50%;
@@ -19,21 +23,10 @@
   padding:0;
   width: 100vw;
   height:100vh;
-  background-color:black;
-  animation: blackout 3s linear;
+  
 }
 
-@keyframes blackout {
-  0%{
-    background-color: white
-  }
-  50%{
-    background-color: rgba(0, 0, 0, 0.503);
-  }
-  100%{
-    background-color:black;
-  }
-}
+
 
 
 

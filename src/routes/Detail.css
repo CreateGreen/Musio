@@ -1,0 +1,40 @@
+.detail {
+  margin: 0;
+  padding: 0;
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4='),
+  auto;
+  
+}
+.detail_img {
+  position:relative;
+
+}
+.detail_img > img {
+  width: 100vw;
+  min-height: 100vh;
+  display: block;
+  /* animation: todark 2s linear;
+  animation-fill-mode: forwards;
+   */
+}
+/* 
+@keyframes todark{
+    0%{
+      filter:grayscale(0)
+    }
+    50%{
+      filter:grayscale(0.3)
+    }
+    100%{
+      filter:grayscale(0.6)
+    }
+} */
+
+.detail_text{
+  position:absolute;
+  
+  
+  left:0;
+  top:0;
+
+}
