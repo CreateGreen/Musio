@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/Musio/static/css/main.87c0a74d.css",
-    "main.js": "/Musio/static/js/main.d5301140.js",
+    "main.css": "/Musio/static/css/main.c7d65622.css",
+    "main.js": "/Musio/static/js/main.a9ec2dae.js",
+    "static/css/663.7edb2cb1.chunk.css": "/Musio/static/css/663.7edb2cb1.chunk.css",
+    "static/js/663.c61f3df8.chunk.js": "/Musio/static/js/663.c61f3df8.chunk.js",
     "static/media/noise4.jpg": "/Musio/static/media/noise4.45da5f1c0d7747ed9a84.jpg",
+    "static/media/ink-transition.png": "/Musio/static/media/ink-transition.d4361b5b1faef242449c.png",
+    "static/media/modal.jpg": "/Musio/static/media/modal.771430f84158e4869acd.jpg",
     "static/media/test3.jpg": "/Musio/static/media/test3.d079b7aa21f56795b9b2.jpg",
     "static/media/test4.jpg": "/Musio/static/media/test4.bc215cc96d3aea6a6aaa.jpg",
     "index.html": "/Musio/index.html",
-    "main.87c0a74d.css.map": "/Musio/static/css/main.87c0a74d.css.map",
-    "main.d5301140.js.map": "/Musio/static/js/main.d5301140.js.map"
+    "main.c7d65622.css.map": "/Musio/static/css/main.c7d65622.css.map",
+    "main.a9ec2dae.js.map": "/Musio/static/js/main.a9ec2dae.js.map",
+    "663.7edb2cb1.chunk.css.map": "/Musio/static/css/663.7edb2cb1.chunk.css.map",
+    "663.c61f3df8.chunk.js.map": "/Musio/static/js/663.c61f3df8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.87c0a74d.css",
-    "static/js/main.d5301140.js"
+    "static/css/main.c7d65622.css",
+    "static/js/main.a9ec2dae.js"
   ]
 }
