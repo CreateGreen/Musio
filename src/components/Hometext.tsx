@@ -14,6 +14,7 @@ const Hometext = ({ click }: PropsType) => {
       opacity: 0,
       ease: Power1.easeOut,
       x: 500,
+      stagger:0.1,
       duration: 1,
     });
     gsap.to(".sidetext", {
