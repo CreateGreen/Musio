@@ -28,7 +28,7 @@ function Amazon() {
         >
           Amazon Copy
         </motion.h2>
-        <Link to={"https://creategreen.github.io/Amazoncopy/"}>
+        <a href={"https://creategreen.github.io/Amazoncopy/"}>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ function Amazon() {
           >
             Visit
           </motion.p>
-        </Link>
+        </a>
       </motion.div>
       <motion.div
         className="amazon_right"

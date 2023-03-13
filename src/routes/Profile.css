@@ -1,9 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 .profile{
     margin:0;
     padding:0;
     width:100vw;
-    height:100vh;
+    overflow-y:auto;
     background-color:#212129;
     cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4='),
     auto;
+}
+
+.section_one{
+    height: 300vh;
+    overflow:hidden;
+    display:flex;
+}
+.text_container{
+    
+    position:absolute;
+    margin:0;
+    
+    left:50%;
+    transform: translateX(-50%);
+    font-size:44.44vw;
+}
+.profile_text{
+   position:relative;
+    color:white;
+    
+    font-family: "Staatliches", cursive;
+    display: flex;
+    will-change: transform;
+    
+}
+.text{
+    
+    
+}
+.section_two{
+    margin:0;
+
+    width:100vw;
+    height:100vh;
+    align-items: center;
 }

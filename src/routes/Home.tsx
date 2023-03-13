@@ -12,8 +12,10 @@ import Hometext from "../components/Hometext";
 import { gsap } from "gsap";
 import { MotionCanvas, motion as motion3d } from "framer-motion-3d";
 import { motion, MotionConfig } from "framer-motion";
+import Loading from "../components/Loading";
 
 export default function Home() {
+
   const [clickfortext, setclickfortext] = useState(false);
 
   const click = useRef(false);
@@ -77,6 +79,7 @@ export default function Home() {
       </mesh>
     );
   };
+  
 
   return (
     <motion.div

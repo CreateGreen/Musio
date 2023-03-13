@@ -1,6 +1,6 @@
 {
   "name": "musio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.47.1",
@@ -16,6 +16,7 @@
     "framer-motion": "^10.1.0",
     "framer-motion-3d": "^10.1.0",
     "gsap": "^3.11.4",
+    "gsap-trial": "^3.11.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",

@@ -1,0 +1,30 @@
+.loading {
+  background: #212129 url("../../public/modal.jpg") no-repeat center center;
+  background-size: cover;
+  width:100vw;
+  height:100vh;
+    
+}
+.layer{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:2500%;
+    height:100%;
+    transform:translateY(-50%) translateX(-2%);
+    background: url("../../public/ink-transition.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    animation: cleanlayer 1s steps(24);
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes cleanlayer {
+    0%{
+        transform: translateY(-50%) translateX(-98%);
+    }
+    100%{
+        transform: translateY(-50%) translateX(-2%);
+    }
+
+}
