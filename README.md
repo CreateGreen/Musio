@@ -18,9 +18,15 @@
     -THREE.js(R3F)
 
 ## Preview with Code
-<img src="https://user-images.githubusercontent.com/91831423/226841498-55b79886-6086-4953-b603-5028fb96518e.gif" >
-Mainpage
+- Main page -
+<img src="https://user-images.githubusercontent.com/91831423/226843808-f3eacddd-d958-40b5-9131-14fa1ed98246.gif" >
 
+
+- Project page - 
+<img src="https://user-images.githubusercontent.com/91831423/226844027-ddf4bb02-cabb-41ad-9482-a1a6a63c99de.gif" >
+
+- Profile page -
+<img src="https://user-images.githubusercontent.com/91831423/226844313-578afade-13d5-4270-a94e-f62201df9967.gif">
 
 
 ## Trouble Shooting
