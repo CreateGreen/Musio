@@ -2,20 +2,20 @@
 #### https://creategreen.github.io/Musio/
 
 ## Portfolio Site 
--제목: Musio 
--목적: 제가 진행했던 토이 프로젝트를 웹에서 보여주기 위해 개발하였습니다.
--기간: 2023/01 ~ 진행중 
--인원: 개인
+- 제목: Musio 
+- 목적: 제가 진행했던 토이 프로젝트를 웹에서 보여주기 위해 개발하였습니다.
+- 기간: 2023/01 ~ 진행중 
+- 인원: 개인
 
 ## Stack
--언어
-    -JavaScript
-    -TypeScript
--프레임워크
-    -React
--툴킷/라이브러리
-    -GSAP
-    -THREE.js(R3F)
+- 언어
+    - JavaScript
+    - TypeScript
+- 프레임워크
+    - React
+- 툴킷/라이브러리
+    - GSAP
+    - THREE.js(R3F)
 
 ## Preview 
 - Main page 
