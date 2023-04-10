@@ -1,5 +1,5 @@
 import "./Home.css";
-import { useRef, useMemo, useState } from "react";
+import { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import vertexShader from "../glsl/vertex";
 import fragmentShader from "../glsl/fragment";
@@ -10,18 +10,16 @@ import afterimg from "../img/test4.jpg";
 import noise from "../img/noise4.jpg";
 import Hometext from "../components/Hometext";
 import { gsap } from "gsap";
-import { MotionCanvas, motion as motion3d } from "framer-motion-3d";
-import { motion, MotionConfig } from "framer-motion";
-import Loading from "../components/Loading";
+import { motion } from "framer-motion";
 
 export default function Home() {
-
   const [clickfortext, setclickfortext] = useState(false);
 
   const click = useRef(false);
+
   const transition = () => {
-    click.current = !click.current;
-    setclickfortext(click.current);
+    click.current = true;
+    setclickfortext(true);
   };
   const Back = () => {
     const mesh = useRef<ShaderMaterial | null>(null);
@@ -51,16 +49,19 @@ export default function Home() {
       []
     );
 
-    useFrame((state) => {
+    useFrame((state, delta) => {
       const { clock } = state;
       if (!mesh.current) {
         return;
       }
       mesh.current.uniforms.uTime.value = clock.getElapsedTime();
+    });
+
+    useEffect(() => {
       click.current
         ? gsap.to(mesh.current.uniforms.uClickState, { value: 0 })
         : gsap.to(mesh.current.uniforms.uClickState, { value: 1 });
-    });
+    }, [click.current]);
 
     return (
       <mesh scale={[1, 1, 1]} onClick={() => transition()}>
@@ -79,7 +80,6 @@ export default function Home() {
       </mesh>
     );
   };
-  
 
   return (
     <motion.div
@@ -92,6 +92,7 @@ export default function Home() {
       <div className="home_text">
         <Hometext click={clickfortext} />
       </div>
+
       <div className="home_canvas">
         <Canvas orthographic={true} dpr={window.devicePixelRatio}>
           <Back />

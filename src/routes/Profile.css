@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 .profile{
+   
     margin:0;
     padding:0;
-    width:100vw;
+    
     overflow-y:auto;
     background-color:#212129;
     cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4='),
@@ -12,14 +13,14 @@
 }
 
 .section_one{
-    height: 300vh;
+    height: 200vh;
     overflow:hidden;
     display:flex;
 }
 .text_container{
     
     position:absolute;
-    margin:0;
+    margin:auto;
     
     left:50%;
     transform: translateX(-50%);
@@ -40,8 +41,8 @@
 }
 .section_two{
     margin:0;
-
-    width:100vw;
+    padding:0;
     height:100vh;
-    align-items: center;
+  
+    
 }

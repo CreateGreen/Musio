@@ -85,6 +85,11 @@
     stroke-width: 3px;
     
 }
+.sidetext:hover{
+    fill: rgba(240, 255, 255, 0.849);
+    transition: 0.7s;
+    
+}
 
 
 

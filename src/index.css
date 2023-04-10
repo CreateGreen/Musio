@@ -4,5 +4,6 @@ body{
     overflow: hidden;
     min-height: 100vh;
     overflow-y: auto;
+    background-color:rgba(33, 43, 49, 0.76);
     
 }

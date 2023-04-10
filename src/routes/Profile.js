@@ -1,4 +1,4 @@
-import { Text, TrackballControls, Text3D } from "@react-three/drei";
+import { Text, TrackballControls, Text3D ,Center} from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { motion, useScroll } from "framer-motion";
 import { useRef, useState, useMemo, useLayoutEffect } from "react";
@@ -12,13 +12,15 @@ gsap.registerPlugin(ScrollTrigger);
 const Profile = () => {
   function Word({ children, ...props }) {
     const color = new THREE.Color();
-    
+
     const fontProps = {
       font: "/Musio/Staatliches_Regular.json",
       size: 2,
       letterSpacing: -0.05,
       lineHeight: 1,
       "material-toneMapped": false,
+      anchorX:"center",
+      anchorY:"middle"
     };
     const ref = useRef();
     const [hovered, setHovered] = useState(false);
@@ -41,7 +43,9 @@ const Profile = () => {
         0.5
       );
     });
+    
     return (
+      <Center position ={props.position}>
       <Text3D
         ref={ref}
         onPointerOver={over}
@@ -52,6 +56,7 @@ const Profile = () => {
         {...fontProps}
         children={children}
       />
+    </Center>
     );
   }
 
@@ -67,8 +72,8 @@ const Profile = () => {
     const words = useMemo(() => {
       const temp = [];
       const spherical = new THREE.Spherical();
-      const phiSpan = Math.PI / (count + 1);
-      const thetaSpan = (Math.PI * 2) / count;
+      const phiSpan = Math.PI / (count +1);
+      const thetaSpan = (Math.PI * 2) / (count);
       for (let i = 1; i < count + 1; i++)
         for (let j = 0; j < count; j++)
           temp.push([
@@ -89,21 +94,40 @@ const Profile = () => {
   useLayoutEffect(() => {
     const tl = gsap.context((self) => {
       gsap.to(".profile_text", {
-        scale: 0,
+        scale: 0.1,
         ease: "sign.out",
-        
+
         scrollTrigger: {
           trigger: ".section_one",
           start: "top top",
-          end: ()=>"+="+window.innerHeight,
+          end: () => "+=" + window.innerHeight,
           scrub: 5,
-          pin:'.text_container',
+          pin: true,
         },
       });
     }, main);
 
+    const tl2 = gsap.context((self) => {
+      gsap.to(".section_two", {
+        opacity: 1,
+        ease: "sign.out",
+
+        scrollTrigger: {
+          trigger: ".section_two",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 2,
+          
+          
+        },
+      });
+    },main);
+
     gsap.fromTo(".text", { y: -100 }, { stagger: 0.1, duration: 1.5, y: 0 });
-    return () => tl.revert();
+    return () => {
+      tl.revert();
+      tl2.revert();
+    };
   }, []);
 
   return (
@@ -112,8 +136,9 @@ const Profile = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      ref={main}
     >
-      <section className="section_one" ref={main}>
+      <section className="section_one">
         <h1 className="text_container">
           <div className="profile_text">
             <div className="text">H</div>
@@ -125,11 +150,11 @@ const Profile = () => {
         </h1>
       </section>
 
-      <section className="section_two">
-        <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
+      <section className="section_two" style={{opacity:0.4}}>
+        <Canvas dpr={window.devicePixelRatio} camera={{ position: [0, 0, 35], fov: 90 }}>
           <fog attach="fog" args={["#202025", 0, 80]} />
           <Cloud count={5} radius={20} />
-          <TrackballControls maxDistance={40} minDistance={10} noZoom={true} />
+          <TrackballControls noZoom={true} />
         </Canvas>
       </section>
     </motion.div>
