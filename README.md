@@ -43,10 +43,13 @@
 
 2. Typescript 는 실시간 디버깅을 하기 위함, 고로 정확한 사용법을 알아야 추후에 버그 발생 가능성을 줄일 수 있다. ( 가량 any 타입을 남발한다던지 하는 잘못된 코드 작성)
 
+## Have to
 
-
-
-
+1. 뒤로가기 버튼
+2. 로딩 시간 최적화 (material 보다 svg text 이미지가 먼저 재생되고 있음)
+3. page transition 이 부드럽게 만들기 (정안되면 화면을 가리면서 나오는식으로 바꿔줘야함)
+4. profile page 부분 contents 채우기 
+5. home 화면 mouse click 유도 text 필요
 
 --------------
 #### References
