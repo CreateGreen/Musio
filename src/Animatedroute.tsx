@@ -2,10 +2,9 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Profile from "./routes/Profile";
 import Project from "./routes/Project";
 import Detail from "./routes/Detail";
-import Loading from "./components/Loading";
 import Home from "./routes/Home";
 import { AnimatePresence } from "framer-motion";
-import { lazy, Suspense } from "react";
+
 
 function Animatedroute() {
   const location = useLocation();

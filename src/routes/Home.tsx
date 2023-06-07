@@ -51,9 +51,9 @@ export default function Home() {
 
     useFrame((state, delta) => {
       const { clock } = state;
-      if (!mesh.current) {
-        return;
-      }
+      // if (!mesh.current) {
+      //   return;
+      // }
       mesh.current.uniforms.uTime.value = clock.getElapsedTime();
     });
 
@@ -65,7 +65,7 @@ export default function Home() {
 
     return (
       <mesh scale={[1, 1, 1]} onClick={() => transition()}>
-        <planeGeometry args={[size.width, size.height, 10, 5]} />
+        <planeGeometry args={[size.width, size.height, 5, 3]} />
 
         <shaderMaterial
           ref={mesh}
