@@ -1,16 +1,20 @@
 import "./Home.css";
-import { useRef, useMemo, useState, useEffect } from "react";
-import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import vertexShader from "../glsl/vertex";
 import fragmentShader from "../glsl/fragment";
-import * as THREE from "three";
-import { ShaderMaterial, TextureLoader } from "three";
 import image from "../img/test3.jpg";
 import afterimg from "../img/test4.jpg";
-import noise from "../img/noise4.jpg";
-import Hometext from "../components/Hometext";
+import noise from "../img/noise5.jpg";
+
+import { useRef, useMemo, useState, useEffect } from "react";
+import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
+
+import * as THREE from "three";
+import { ShaderMaterial, TextureLoader } from "three";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
+
+import Hometext from "../components/Hometext";
+
 
 export default function Home() {
   const [clickfortext, setclickfortext] = useState(false);
@@ -72,10 +76,6 @@ export default function Home() {
           fragmentShader={fragmentShader}
           vertexShader={vertexShader}
           uniforms={uniforms}
-          // transparent={true}
-          // opacity={0}
-          // wireframe={true}
-          // side={THREE.DoubleSide}
         />
       </mesh>
     );
@@ -89,15 +89,17 @@ export default function Home() {
       exit={{ opacity: 0 }}
       transition={{ duration: 2 }}
     >
-      <div className="home_text">
-        <Hometext click={clickfortext} />
-      </div>
-
       <div className="home_canvas">
         <Canvas orthographic={true} dpr={window.devicePixelRatio}>
           <Back />
         </Canvas>
       </div>
+      
+      <div className="home_text">
+        <Hometext click={clickfortext} />
+      </div>
+
+      
     </motion.div>
   );
 }
