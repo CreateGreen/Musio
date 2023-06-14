@@ -51,6 +51,10 @@
 4. profile page 부분 contents 채우기 
 5. home 화면 mouse click 유도 text 필요
 
+## Solved
+
+-초기 로딩 시간 관련 https://www.notion.so/2df19fb700cc4504867286fdd4cefb25?pvs=4
+
 --------------
 #### References
 ##### Study webGL
