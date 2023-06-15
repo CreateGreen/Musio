@@ -1,10 +1,9 @@
 import "./Home.css";
 import vertexShader from "../glsl/vertex";
 import fragmentShader from "../glsl/fragment";
-import image from "../img/test3.jpg";
-import afterimg from "../img/test4.jpg";
-import noise from "../img/noise5.jpg";
-
+// import image from "../img/test3.jpg";
+// import afterimg from "../img/test4.jpg";
+// import noise from "../img/noise5.jpg";
 import { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 
@@ -17,6 +16,10 @@ import Hometext from "../components/Hometext";
 
 
 export default function Home() {
+  
+
+    
+ 
   const [clickfortext, setclickfortext] = useState(false);
 
   const click = useRef(false);
@@ -28,9 +31,9 @@ export default function Home() {
   const Back = () => {
     const mesh = useRef<ShaderMaterial | null>(null);
     const { size } = useThree();
-    const background = useLoader(TextureLoader, image);
-    const afterbackground = useLoader(TextureLoader, afterimg);
-    const noiseimg = useLoader(TextureLoader, noise);
+    const background = useLoader(TextureLoader,process.env.PUBLIC_URL+"/test3.jpg");
+    const afterbackground = useLoader(TextureLoader, process.env.PUBLIC_URL+"/test4.jpg");
+    const noiseimg = useLoader(TextureLoader, process.env.PUBLIC_URL+"/noise5.jpg");
 
     const uniforms = useMemo(
       () => ({
