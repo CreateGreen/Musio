@@ -31,9 +31,9 @@ export default function Home() {
   const Back = () => {
     const mesh = useRef<ShaderMaterial | null>(null);
     const { size } = useThree();
-    const background = useLoader(TextureLoader,process.env.PUBLIC_URL+"/test3.jpg");
-    const afterbackground = useLoader(TextureLoader, process.env.PUBLIC_URL+"/test4.jpg");
-    const noiseimg = useLoader(TextureLoader, process.env.PUBLIC_URL+"/noise5.jpg");
+    const [background,afterbackground,noiseimg] = useLoader(TextureLoader,[process.env.PUBLIC_URL+"/test3.jpg",process.env.PUBLIC_URL+"/test4.jpg",process.env.PUBLIC_URL+"/noise5.jpg"]);
+    // const afterbackground = useLoader(TextureLoader, process.env.PUBLIC_URL+"/test4.jpg");
+    // const noiseimg = useLoader(TextureLoader, process.env.PUBLIC_URL+"/noise5.jpg");
 
     const uniforms = useMemo(
       () => ({
