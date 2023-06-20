@@ -46,14 +46,14 @@
 ## Have to
 
 1. 뒤로가기 버튼
-2. 로딩 시간 최적화 (material 보다 svg text 이미지가 먼저 재생되고 있음)
-3. page transition 이 부드럽게 만들기 (정안되면 화면을 가리면서 나오는식으로 바꿔줘야함)
-4. profile page 부분 contents 채우기 
-5. home 화면 mouse click 유도 text 필요
+2. page transition 이 부드럽게 만들기 (정안되면 화면을 가리면서 나오는식으로 바꿔줘야함)
+3. profile page 부분 contents 채우기 
+4. home 화면 mouse click 유도 text 필요
+5. home 화면 side text 위치 문제 (onhover 가 화면을 줄이면 인식x) 
 
 ## Solved
 
--초기 로딩 시간 관련 [https://www.notion.so/2df19fb700cc4504867286fdd4cefb25?pvs=4](https://alluring-stilton-b73.notion.site/2df19fb700cc4504867286fdd4cefb25?pvs=4)
+-초기 로딩 시간 관련 [https://www.notion.so/2df19fb700cc4504867286fdd4cefb25?pvs=4](https://alluring-stilton-b73.notion.site/2df19fb700cc4504867286fdd4cefb25?pvs=4)<br/>
 -function mutiple call 관련 문제로 인한 초기 로딩 지연 https://docs.pmnd.rs/react-three-fiber/tutorials/loading-textures 
 
 --------------
