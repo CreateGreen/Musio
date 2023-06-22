@@ -4,15 +4,19 @@
     background-color:rgba(221,225,227,255);
     display:flex;
     flex-direction:column;
-    align-items: center;
+    align-items:center;
     justify-content: center;
+   
 }
 .demo_img{
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align: center;
 }
 
 .demo_img > p {
-    position:relative;
+    position:absolute;
     bottom:35%;
     text-shadow: 1px -1px 1px black;
     font-size: 1.5rem;
@@ -26,11 +30,21 @@
     scale:0.1;
     filter:brightness(0);
     transition:all 0.5s ease-out;
+
+    
 }
+
 .demo_img > img:hover{
     filter:brightness(0.2);
     scale:0.2;
     transition: all 0.5s ease-in;
+}
+.demo_text{
+    display:flex;
+    
+}
+.right{
+    margin-left:auto;
 }
 
 
@@ -38,22 +52,41 @@
 /* css active */
 
 .demo_img_active{
+    position:relative;
     text-align: center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+   
 }
 .demo_img_active > img{
+    
     border-radius: 50%;
     scale:0.2;
     filter:brightness(0.2);
-    animation: seephoto 1.5s forwards;
+    animation: seephoto 1s forwards;
    
 }
+
 .demo_img_active > p{
-    position:relative;
+    position:absolute;
     bottom:35%;
     text-shadow: 1px -1px 1px black;
     color:rgba(255, 255, 255, 0.685);
     opacity: 0;
-    transition:0.5s;
+    transition: all 0.4s;
+   
+}
+.demo_img_active::before{
+    content: "";
+    position:absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    border:2px solid gold;
+    animation: framepath 3s infinite ;
+
 }
 
 /* animation */
@@ -73,7 +106,21 @@
     }
 }
 
-
+@keyframes framepath {
+    0%,
+    100% {
+        clip-path: inset(0 0 95% 0%);
+    }
+    25% {
+        clip-path: inset(0 100% 0 0);
+    }
+    50% {
+        clip-path: inset(100% 0 0 0);
+    }
+    75% {
+        clip-path: inset(0 0 0 100%);
+    }
+}
 
 
 @keyframes seephoto {
