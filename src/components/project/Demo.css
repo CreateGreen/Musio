@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+
+
 .demo{
+
     width:100vw;
     height:100vh;
     background-color:rgba(221,225,227,255);
@@ -6,18 +12,20 @@
     flex-direction:column;
     align-items:center;
     justify-content: center;
-   
+    
 }
 .demo_img{
     display:flex;
     align-items:center;
     justify-content:center;
     text-align: center;
+    position:relative;
+    z-index: 1;
 }
 
 .demo_img > p {
     position:absolute;
-    bottom:35%;
+    bottom:30%;
     text-shadow: 1px -1px 1px black;
     font-size: 1.5rem;
     color:rgba(255, 255, 255, 0.685);
@@ -39,12 +47,38 @@
     scale:0.2;
     transition: all 0.5s ease-in;
 }
+
+/* non click side text  */
 .demo_text{
+    z-index: 0;
+    position: absolute;
     display:flex;
+    width:100%;
+    height:50%;
+    justify-content:space-between;
+}
+.left{
+    position:relative;
+    
+    font-size: clamp(2.8rem,4vw,4rem);
+    font-weight: bold;
+    font-family:"Staatliches";
+    line-height: 2;
+    padding-left:4%;
+    margin:0;
     
 }
 .right{
-    margin-left:auto;
+    position:relative;
+    margin:0;
+    color:dimgrey;
+    font-family:"Staatliches";
+    font-size: clamp(0.9rem,2vw,1.2rem);
+    line-height: 2;
+    height:50%;
+    top: 70%;
+    padding-right:5%;
+    
 }
 
 
@@ -57,6 +91,7 @@
     display:flex;
     align-items:center;
     justify-content: center;
+    
    
 }
 .demo_img_active > img{
@@ -65,7 +100,7 @@
     scale:0.2;
     filter:brightness(0.2);
     animation: seephoto 1s forwards;
-   
+    
 }
 
 .demo_img_active > p{
@@ -84,10 +119,13 @@
     left:0;
     right:0;
     bottom:0;
-    border:2px solid gold;
-    animation: framepath 3s infinite ;
-
+    scale:1.05;
+    transition: all 3s;
+    border:20px solid rgba(134, 117, 21, 0.685);
+    box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.822);
+    animation: framepath 3s;
 }
+
 
 /* animation */
 
@@ -107,18 +145,20 @@
 }
 
 @keyframes framepath {
-    0%,
+    0%{
+        clip-path: inset(95% 40% 0 40%);
+        scale:1;
+        box-shadow: 20px 20px 20px 20px black;
+    }
+    
+    30% {
+        clip-path: inset(95% 0 0 0);
+    }
+   
+    
     100% {
-        clip-path: inset(0 0 95% 0%);
-    }
-    25% {
-        clip-path: inset(0 100% 0 0);
-    }
-    50% {
-        clip-path: inset(100% 0 0 0);
-    }
-    75% {
-        clip-path: inset(0 0 0 100%);
+        clip-path: inset(0% 0% 0% 0%);
+        box-shadow: 20px 20px 20px 20px black;
     }
 }
 
@@ -132,7 +172,9 @@
     
     100%{
         border-radius:0%;
-        scale:1;
+        scale:0.98;
         filter:brightness(1);
+         
+       
     }
 }
