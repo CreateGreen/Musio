@@ -139,17 +139,14 @@ const Project = () => {
           damping={4}
           pages={4}
           distance={1}
-          // style={{
-          //   backgroundImage: "url('./concrete_wall.jpg')",
-          //   backgroundAttachment: "local",
-          //   backgroundRepeat: "repeat-x",
-          // }}
+          
+          style={{msScrollbarTrackColor:"black"}}
         >
           <Scroll>
             <Pages />
           </Scroll>
           <Scroll html>
-            <div>
+            <div className="container">
               <h1 style={{ position: "absolute", top: "7vh", left: "10vw" }}>
                 Project
               </h1>
