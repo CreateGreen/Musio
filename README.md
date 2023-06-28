@@ -53,8 +53,11 @@
 
 ## Solved
 
--초기 로딩 시간 관련 [https://www.notion.so/2df19fb700cc4504867286fdd4cefb25?pvs=4](https://alluring-stilton-b73.notion.site/2df19fb700cc4504867286fdd4cefb25?pvs=4)<br/>
--function mutiple call 관련 문제로 인한 초기 로딩 지연 https://docs.pmnd.rs/react-three-fiber/tutorials/loading-textures 
+- 초기 로딩 시간 관련 [https://www.notion.so/2df19fb700cc4504867286fdd4cefb25?pvs=4](https://alluring-stilton-b73.notion.site/2df19fb700cc4504867286fdd4cefb25?pvs=4)<br/>
+
+- function mutiple call 관련 문제로 인한 초기 로딩 지연 https://docs.pmnd.rs/react-three-fiber/tutorials/loading-textures <br/>
+
+- scrollbar style 적용 https://alluring-stilton-b73.notion.site/acb94156afcc487aba36df65210b29a2?pvs=4 <br/>
 
 --------------
 #### References
