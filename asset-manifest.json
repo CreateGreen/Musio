@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Musio/static/css/main.d5fcf600.css",
-    "main.js": "/Musio/static/js/main.faaa3161.js",
+    "main.css": "/Musio/static/css/main.fe8fdd86.css",
+    "main.js": "/Musio/static/js/main.f106169d.js",
     "index.html": "/Musio/index.html",
-    "main.d5fcf600.css.map": "/Musio/static/css/main.d5fcf600.css.map",
-    "main.faaa3161.js.map": "/Musio/static/js/main.faaa3161.js.map"
+    "main.fe8fdd86.css.map": "/Musio/static/css/main.fe8fdd86.css.map",
+    "main.f106169d.js.map": "/Musio/static/js/main.f106169d.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5fcf600.css",
-    "static/js/main.faaa3161.js"
+    "static/css/main.fe8fdd86.css",
+    "static/js/main.f106169d.js"
   ]
 }
