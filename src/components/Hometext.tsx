@@ -20,7 +20,7 @@ const Hometext = ({ click }: PropsType) => {
     gsap.to(".sidetext", {
       opacity: 1,
       ease: Power1.easeIn,
-      x: 150,
+      x: 190,
       duration: 2,
     });
   };
@@ -88,7 +88,7 @@ const Hometext = ({ click }: PropsType) => {
             <text
               className="sidetext"
               alignmentBaseline="central"
-              x="-150"
+              x="-190"
               y="30%"
               opacity={0}
             >
@@ -99,7 +99,7 @@ const Hometext = ({ click }: PropsType) => {
             <text
               className="sidetext"
               alignmentBaseline="central"
-              x="-150"
+              x="-190"
               y="70%"
               opacity={0}
             >
