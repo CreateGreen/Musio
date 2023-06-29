@@ -15,15 +15,11 @@ import { motion } from "framer-motion";
 import Hometext from "../components/Hometext";
 
 
+
 export default function Home() {
   
-
-    
- 
   const [clickfortext, setclickfortext] = useState(false);
-
   const click = useRef(false);
-
   const transition = () => {
     click.current = true;
     setclickfortext(true);
@@ -57,10 +53,13 @@ export default function Home() {
     );
 
     useFrame((state, delta) => {
-      const { clock } = state;
+      const { clock,mouse } = state;
+      
+      
       // if (!mesh.current) {
       //   return;
       // }
+      
       mesh.current.uniforms.uTime.value = clock.getElapsedTime();
     });
 
@@ -80,13 +79,14 @@ export default function Home() {
           vertexShader={vertexShader}
           uniforms={uniforms}
         />
+        
       </mesh>
     );
   };
 
   return (
     <motion.div
-      className="home"
+      className={"home"}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -97,7 +97,7 @@ export default function Home() {
           <Back />
         </Canvas>
       </div>
-      
+      <div></div>
       <div className="home_text">
         <Hometext click={clickfortext} />
       </div>

@@ -19,7 +19,7 @@
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-
+    z-index:0;
 }
 
 .hometext_svg  {
@@ -67,15 +67,15 @@
     
     padding:0;
     margin-left:auto;
-    margin-right:50px;
+    margin-right:5%;
     background: transparent;
     justify-content: center;
     align-items: center;
-
+    z-index:1;
 }
 .hometext_sidesvg{
     width:150px;
-
+   
 }
 .sidetext{
     font-family: 'Staatliches', cursive;
