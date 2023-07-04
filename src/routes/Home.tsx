@@ -1,9 +1,6 @@
 import "./Home.css";
 import vertexShader from "../glsl/vertex";
 import fragmentShader from "../glsl/fragment";
-// import image from "../img/test3.jpg";
-// import afterimg from "../img/test4.jpg";
-// import noise from "../img/noise5.jpg";
 import { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 
@@ -19,7 +16,13 @@ import Hometext from "../components/Hometext";
 export default function Home() {
   
   const [clickfortext, setclickfortext] = useState(false);
+  
+  const cursorRef = useRef({x:0,y:0});
+ 
   const click = useRef(false);
+
+  
+
   const transition = () => {
     click.current = true;
     setclickfortext(true);
@@ -28,9 +31,7 @@ export default function Home() {
     const mesh = useRef<ShaderMaterial | null>(null);
     const { size } = useThree();
     const [background,afterbackground,noiseimg] = useLoader(TextureLoader,[process.env.PUBLIC_URL+"/test3.jpg",process.env.PUBLIC_URL+"/test4.jpg",process.env.PUBLIC_URL+"/noise5.jpg"]);
-    // const afterbackground = useLoader(TextureLoader, process.env.PUBLIC_URL+"/test4.jpg");
-    // const noiseimg = useLoader(TextureLoader, process.env.PUBLIC_URL+"/noise5.jpg");
-
+    
     const uniforms = useMemo(
       () => ({
         uTime: {
@@ -59,7 +60,9 @@ export default function Home() {
       // if (!mesh.current) {
       //   return;
       // }
-      
+      cursorRef.current.x= mouse.x;
+      cursorRef.current.y= mouse.y;
+      console.log(cursorRef.current);
       mesh.current.uniforms.uTime.value = clock.getElapsedTime();
     });
 
@@ -67,7 +70,8 @@ export default function Home() {
       click.current
         ? gsap.to(mesh.current.uniforms.uClickState, { value: 0 })
         : gsap.to(mesh.current.uniforms.uClickState, { value: 1 });
-    }, [click.current]);
+      
+    }, []);
 
     return (
       <mesh scale={[1, 1, 1]} onClick={() => transition()}>
@@ -80,6 +84,7 @@ export default function Home() {
           uniforms={uniforms}
         />
         
+        
       </mesh>
     );
   };
@@ -91,13 +96,17 @@ export default function Home() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 2 }}
+      
     >
+      
       <div className="home_canvas">
         <Canvas orthographic={true} dpr={window.devicePixelRatio}>
           <Back />
+          
         </Canvas>
       </div>
-      <div></div>
+
+      
       <div className="home_text">
         <Hometext click={clickfortext} />
       </div>
