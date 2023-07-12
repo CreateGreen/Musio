@@ -1,14 +1,14 @@
 import "./Home.css";
 import vertexShader from "../glsl/vertex";
 import fragmentShader from "../glsl/fragment";
-import { useRef, useMemo, useState, useEffect } from "react";
+import { useRef, useMemo, useState, useEffect, Ref } from "react";
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 
-import * as THREE from "three";
+// import * as THREE from "three";
 import { ShaderMaterial, TextureLoader } from "three";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
-
+import { Mousetrack, Spring } from '../components/Mousetrack';
 import Hometext from "../components/Hometext";
 
 
@@ -17,14 +17,15 @@ export default function Home() {
   
   const [clickfortext, setclickfortext] = useState(false);
   
-  const cursorRef = useRef({x:0,y:0});
- 
-  const click = useRef(false);
+  // const cursorRef = useRef({x:0,y:0});
+  const ref = useRef(null);
+  const variants = Mousetrack(ref);
+  const click = useRef(1);
 
   
 
   const transition = () => {
-    click.current = true;
+    gsap.to(click, { current: 0 })
     setclickfortext(true);
   };
   const Back = () => {
@@ -44,7 +45,7 @@ export default function Home() {
           value: afterbackground,
         },
         uClickState: {
-          value: 1,
+          value: click.current,
         },
         uDisp: {
           value: noiseimg,
@@ -60,21 +61,20 @@ export default function Home() {
       // if (!mesh.current) {
       //   return;
       // }
-      cursorRef.current.x= mouse.x;
-      cursorRef.current.y= mouse.y;
-      console.log(cursorRef.current);
+      
+      mesh.current.uniforms.uClickState.value = click.current;
       mesh.current.uniforms.uTime.value = clock.getElapsedTime();
     });
 
-    useEffect(() => {
-      click.current
-        ? gsap.to(mesh.current.uniforms.uClickState, { value: 0 })
-        : gsap.to(mesh.current.uniforms.uClickState, { value: 1 });
+    // useEffect(() => {
+    //   click.current
+    //     ? gsap.to(mesh.current.uniforms.uClickState, { value: 0 })
+    //     : gsap.to(mesh.current.uniforms.uClickState, { value: 1 });
       
-    }, []);
+    // }, []);
 
     return (
-      <mesh scale={[1, 1, 1]} onClick={() => transition()}>
+      <mesh scale={[1, 1, 1]} >
         <planeGeometry args={[size.width, size.height, 5, 3]} />
 
         <shaderMaterial
@@ -91,13 +91,26 @@ export default function Home() {
 
   return (
     <motion.div
-      className={"home"}
+      className="home"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 2 }}
-      
+      onClick={() => transition()}
     >
+      <div 
+        className="home_container" 
+        ref={ref}
+        >
+      <motion.div
+        className="cursor"
+        variants={variants}
+        animate={clickfortext ?  "change":"default"}
+        transition={Spring}
+      >
+
+      </motion.div>
+      
       
       <div className="home_canvas">
         <Canvas orthographic={true} dpr={window.devicePixelRatio}>
@@ -105,13 +118,12 @@ export default function Home() {
           
         </Canvas>
       </div>
-
       
       <div className="home_text">
         <Hometext click={clickfortext} />
       </div>
 
-      
+      </div>
     </motion.div>
   );
 }
