@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+
 .home{
   position:absolute;
   margin:0;
@@ -7,7 +11,7 @@
   /* cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4='),
   auto;
    */
-  /* cursor:none;   */
+  cursor:none;  
 }
 
 .home_text{
@@ -63,7 +67,14 @@
 }
 
 
+.cursortext{
+  color:black;
+  pointer-events: none;
+  font-size:22px;
+  font-family:'Staatliches', cursive ;
+  margin-top:90%;
 
+}
 
 
 /* .homeimage,

@@ -8,6 +8,7 @@
     background: transparent;
     justify-content: center;
     display:flex;
+    cursor:none;
     
 }
 .hometext_main{
@@ -83,6 +84,7 @@
     fill:transparent;
     stroke:antiquewhite;
     stroke-width: 3px;
+    cursor:none;
     
 }
 .sidetext:hover{
