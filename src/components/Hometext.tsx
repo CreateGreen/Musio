@@ -6,9 +6,10 @@ import { Link } from "react-router-dom";
 
 interface PropsType {
   click: boolean;
+  hover: string;
 }
 
-const Hometext = ({ click }: PropsType) => {
+const Hometext = ({ click,hover}: PropsType) => {
   const clicktrans = () => {
     gsap.to(".maintext", {
       opacity: 0,

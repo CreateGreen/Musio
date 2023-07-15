@@ -16,17 +16,24 @@ import Hometext from "../components/Hometext";
 export default function Home() {
   
   const [clickfortext, setclickfortext] = useState(false);
-  
+  const [cursorState, setcursorState] = useState("default");
+
   // const cursorRef = useRef({x:0,y:0});
   const ref = useRef(null);
   const variants = Mousetrack(ref);
   const click = useRef(1);
-
+  const handle_texthover = ()=>{
+    setcursorState("changehover");
+  }
+  const handle_textout =()=>{
+    setcursorState("change");
+  }
   
 
-  const transition = () => {
+  const clicktransition = () => {
     gsap.to(click, { current: 0 })
     setclickfortext(true);
+    setcursorState("change")
   };
   const Back = () => {
     const mesh = useRef<ShaderMaterial | null>(null);
@@ -55,7 +62,7 @@ export default function Home() {
     );
 
     useFrame((state, delta) => {
-      const { clock,mouse } = state;
+      const { clock } = state;
       
       
       // if (!mesh.current) {
@@ -96,7 +103,7 @@ export default function Home() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 2 }}
-      onClick={() => transition()}
+      onClick={() => clicktransition()}
     >
       <div 
         className="home_container" 
@@ -105,10 +112,12 @@ export default function Home() {
       <motion.div
         className="cursor"
         variants={variants}
-        animate={clickfortext ?  "change":"default"}
+        animate={cursorState}
         transition={Spring}
+        
       >
-
+        <span className="cursortext">{clickfortext? "":"Click"}</span>
+        
       </motion.div>
       
       
@@ -120,7 +129,7 @@ export default function Home() {
       </div>
       
       <div className="home_text">
-        <Hometext click={clickfortext} />
+        <Hometext click={clickfortext} hover={cursorState}/>
       </div>
 
       </div>
