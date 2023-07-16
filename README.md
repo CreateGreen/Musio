@@ -48,7 +48,6 @@
 1. routes 내부 component 에 너무 많은 function이 뭉쳐있음 -> component 로 분리필요 
 2. page transition 이 부드럽게 만들기 (정안되면 화면을 가리면서 나오는식으로 바꿔줘야함)
 3. profile page 부분 contents 채우기 
-4. home 화면 mouse click 유도 text 필요
 
 ## Solved
 
@@ -59,6 +58,8 @@
 - scrollbar style 적용 https://alluring-stilton-b73.notion.site/acb94156afcc487aba36df65210b29a2?pvs=4 <br/>
 
 - home 화면 side text 위치 문제(onhover 가 화면을 줄이면 인식x) main 하고 side text가 겹쳐서 화면을 줄일 시 main text area 가 side text의 일부분을 덮어 마우스 hover event 가 적용이 안되었음 , z- index 값으로 해결
+
+- home 화면 mouse click 유도 text 필요 - useRef 로 rerendering 방지하고 framer motion 으로 div 가 mouse position 에 따라오도록 함 
 
 --------------
 #### References
