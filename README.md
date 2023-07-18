@@ -47,7 +47,8 @@
 
 1. routes 내부 component 에 너무 많은 function이 뭉쳐있음 -> component 로 분리필요 
 2. page transition 이 부드럽게 만들기 (정안되면 화면을 가리면서 나오는식으로 바꿔줘야함)
-3. profile page 부분 contents 채우기 
+3. profile page 부분 contents 채우기
+4. home sidetext animation 중 mouse hover 하면 제자리에 멈추는 현상 
 
 ## Solved
 
