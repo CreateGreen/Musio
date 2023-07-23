@@ -60,7 +60,7 @@
 
 - home 화면 side text 위치 문제(onhover 가 화면을 줄이면 인식x) main 하고 side text가 겹쳐서 화면을 줄일 시 main text area 가 side text의 일부분을 덮어 마우스 hover event 가 적용이 안되었음 , z- index 값으로 해결
 
-- home 화면 mouse click 유도 text 필요 - useRef 로 rerendering 방지하고 framer motion 으로 div 가 mouse position 에 따라오도록 함 
+- home 화면 mouse click 유도 text 필요 - useRef 로 rerendering 방지하고 framer motion 으로 div 가 mouse position 에 따라오도록 함 - useEffect 리랜더링 동작 관련 https://alluring-stilton-b73.notion.site/dbfdfa9a6a044107941172fe98858fa5?pvs=4
 
 --------------
 #### References
